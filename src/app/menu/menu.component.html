@@ -1,1 +1,101 @@
-<p>menu works!</p>
+ <nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item active">
+      
+      </li>
+
+   
+
+      <li class="nav-item pl-3">
+    
+      </li>
+    </ul>
+  
+      <ul class="navbar-nav ml-auto d-flex align-items-center"> <div class="nav-item pl-3 d-flex justify-content-center">
+          <p class="m-0 font-weight-bold text-white fs-16"></p> <a [routerLink]="['/usuario-edit',{id}]"><p class="m-0 font-weight-bold text-white fs-16"><i class="fa fa-pencil-square"></i></p> </a>
+    </div>   
+      <li class="nav-item active">
+
+   
+
+        <img src="../../assets/img/Ecoleta (2).svg" alt="Logo" 
+        width="75px" height="75px" class="img-fluid rounded-circle">
+          </li>
+          <li class="nav-item active">
+          
+              </li>
+      <li class="nav-item pl-3">
+          <a (click)='sair()'class="m-0 font-weight-bold text-white fs-16"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+      
+    </ul>
+
+  </div>
+</nav> 
+<div class="height"></div>
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="check">
+<!--header area start-->
+<!-- <header>
+  <label for="check">
+    <i class="fas fa-bars" id="sidebar_btn"></i>
+  </label> -->
+  <!-- <div class="left_area">
+    <h3>Coding <span>Snow</span></h3>
+  </div>
+  <div class="right_area">
+    <a href="#" class="logout_btn">Logout</a>
+  </div> -->
+<!-- </header> -->
+<!--header area end-->
+<!--mobile navigation bar start-->
+<div class="mobile_nav">
+  <div class="nav_bar">
+    <img src="1.png" class="mobile_profile_image" alt="">
+    <i class="fa fa-bars nav_btn"></i>
+  </div>
+  <div class="mobile_nav_items">
+    <a class="nav-link active"routerLink='/inicio'><i class="fab fa-facebook-square"></i><span> Home</span></a>
+    <a class="nav-link" routerLink='/myposts' href="#"><i class="fas fa-address-card" ></i><span> Minhas postagens</span></a>
+    <a class="nav-link" routerLink='/eventos' ><i class="fas fa-calendar-week"></i><span> Eventos</span></a>
+    <a class="nav-link" routerLink='/suporte' href="#"><i class="fas fa-phone-square-alt"></i><span> Contate-nos</span></a>
+  </div>
+</div>
+<!--mobile navigation bar end-->
+<!--sidebar start-->
+<div class="sidebar">
+  <div class="profile_info">
+    <img src="{{foto}}" class="profile_image" alt="">
+<h4 class="nome-barra">{{nome}}     </h4>     
+  </div>
+  <a class="nav-link active"routerLink='/inicio'><i class="fas fa-home"></i><span> Home</span></a>
+  <a class="nav-link" routerLink='/myposts' href="#"><i class="fas fa-address-card" ></i><span> Minhas postagens</span></a>
+  <a class="nav-link" routerLink='/eventos' ><i class="fas fa-calendar-week"></i><span> Eventos</span></a>
+  <a class="nav-link" routerLink='/suporte' href="#"><i class="fas fa-phone-square-alt"></i><span> Contate-nos</span></a>
+
+  <!-- <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+  <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a> -->
+  <div class="height"></div> 
+</div>
+<!--sidebar end-->
+
+<!-- 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.nav_btn').click(function(){
+    $('.mobile_nav_items').toggleClass('active');
+  });
+});
+</script> -->

@@ -1,0 +1,59 @@
+.header-site{  /*Primeiro parallax */
+    background-image: url(https://i.imgur.com/CIjgx7c.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Até aqui um afeio parallax simples*/
+    color: #000;
+    padding-top: 350px;
+    padding-bottom: 350px;
+}
+/* https://i.imgur.com/htGaVFH.jpeg - FOFLA ESCURA
+https://i.imgur.com/3JDiNDe.jpeg - FOLHAS CLARAS
+https://i.imgur.com/nCxguCp.jpeg - FLORESTA
+https://i.imgur.com/A9SZYYd.jpeg - planta escura
+https://i.imgur.com/sA4ms3T.jpeg - floresta que dá ora mudar de cor
+https://i.imgur.com/CqIaflS.jpeg - arvore 3d flutuando
+
+https://i.imgur.com/53QO37b.jpeg - muda de plnata na mão, achei nem bonito pq é desfocado
+3 parece interessante
+5 tbm
+7
+10
+12 - ficou legal 
+13
+15
+21
+23
+24
+24
+36
+38 - foi umas da que mais chamou minha atenção.
+39 - interessante
+40
+41
+https://i.imgur.com/pmmYSiR.jpeg
+*/ 
+.header-site h1{
+    color: #000;
+    text-transform:uppercase;
+    
+}
+
+.content-site{ /* espeço após o parallax*/
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.img-site{
+    background-image: url(https://i.imgur.com/pmmYSiR.jpeg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 400px;
+    padding-bottom: 200px;
+    
+
+}
+

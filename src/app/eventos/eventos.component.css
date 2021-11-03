@@ -1,0 +1,93 @@
+.fs-16{
+    font-size: 16pt;
+}
+
+a{
+    cursor: pointer;
+}
+
+        #menu li {
+            display: inline;
+            padding: 15px;
+            }
+            
+            #menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 20px;
+            }
+            
+            #menu li a:hover {
+            color:rgb(77, 253, 183);
+            }
+            
+            
+            #menu{
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            
+            }
+
+            
+            p-30 li{
+                display: inline;
+                margin:0 1em 0 0;
+            }
+
+            .d-block w-50{
+                margin-left: auto;
+
+            }
+            .p-30{
+                border-radius: 50%;
+                display: flex;
+                width: 50px;
+                height: 50px;  
+                }
+
+
+                .wh-300 {
+                    width: 30px;
+                    height: 30px;
+                    display: inline;
+                    border-radius: 50%;
+                    justify-content: auto;
+                    }
+                    .p-30{
+                        border-radius: 50%;
+                        display: flex;
+                        width: 50px;
+                        height: 50px;  
+                        }
+
+                        .btn-primary.custom-btn {
+                            background-color:rgb(77, 253, 183);
+                            border-color: #000;
+                        }
+
+                        
+                        .card{
+                            margin: 10px;
+                            
+                            
+                        }
+                        .card-title{
+                            display: inline;
+                        
+                        }
+                        
+                        .card-body{
+                            display: inline;
+                            align-items: center;
+                        }
+
+                       
+        
+                        
+
+                        .jumbotron{
+                            background:#123417;
+                            color:#ffffff
+
+                        }

@@ -1,0 +1,480 @@
+
+*{
+    font-family: 'Lato', sans-serif;
+} /* fonte da pagina*/
+
+.bg-primary-color{
+    background-color: #fff;
+}/*cor do MENU certeza*/
+
+.bg-secondary-color{
+    background-color: #d8d1bf;
+}/* ESSE AQUI ESTÀ mudando o fundo do texto que vai detalhes importante. era pra sercor de fundo secundaria de mudar toda a cor do site.*/
+
+.bg-dark-color {
+    background-color: #050505;
+} /* */
+
+.primary-color {
+    color: #050505;
+} /*cor da fonte letra*/
+
+.secondary-color{
+    counter-reset: #7a7a7a;
+}
+/*277 não achei a atribuição*/
+
+/* header */
+
+/*header{
+    background-color: #eee;
+   
+        width: 71%;
+        height: 150%;
+        border:#000;
+} *//* Altera no logo que está no topo da tela*/
+
+
+
+/* NAVBAR*/
+
+
+
+#navbar{
+    border-bottom: 1px solid  #7a7a7a;
+}/*  borda a baixo do menu, um traço */
+
+#navbar a:hover{
+    color: #7a7a7a;
+} /* qnd passar o mouse ficar essa cor no bontão*/
+
+#navbar a.active{
+    border-bottom: 1px solid #050505;
+} /* linha a baixo de algo q dá um destaque p/ informar q o link q está ativo no momento*/
+
+.navbar-brand{
+    display: flex;
+} /*Deixa o logo ao lado do nome. com essa junção centraliza com mais facilidade*/
+
+.navbar-brand img{
+    width: 60px;
+} /*temanho do logo (com 60px parece ideal.)*/
+
+.navbar-brand span{
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+} /* titulo. |( font-weight: 700;)palavra que está ao lado do logo, tamanho e negrito [ Obs: qnd selecionei a fonte escolhi varias para facilitar no momento de codificar, quando terminar o projeto deixar só uma fonte. |(font-size: 1.5em;) deixou a palavra maior. |(margin-left: 0.5em;) separou o icone da palavra. |*/
+
+#navbar-items .navbar-nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} /*barra de navegação com os itens. Aqui era pra ter uma linha na parte de cima do menu e a baixo. | (justify-content: center)mover os itens de lugar dentro do menu. |( width: 100%;) fala a largura do menu em relação a pagina. |(display: flex;)*/
+
+#navbar-items .nav-item {
+    margin: 0 1em;
+} /* primero a margem e depois define o espaço entre os icones com em. |*/
+
+/* /NAVBAR*/
+/* */
+
+
+ /*SLIDER carrosel*/
+ #slider{
+    margin-top: 8em;
+    margin: 1em;
+}  /*Afastando da barra de navegação e os conteúdos que estão em baixo*/ 
+
+#slider .carousel-caption{
+    bottom: 3em;
+} /*Mexeu na posição do botão*/
+
+#slider .carousel-caption h5 {
+    font-size: 2.5em;
+    text-shadow: #000 2px 2px;
+} /* (h5)titulo da descrição. |(font-size)fonte. |(text-shadow)sobreado   */ 
+
+.btn {
+    border-radius: 0;
+} /*define o formato do botão */
+
+#slider .btn {
+    padding: 0.3 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+} 
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color:  #111;
+    font-size: 3em;
+} /*Seria os icones de passar a imagem, AJUSTAR DEPOIS PQ ESSE ' I ' É DO bt5*/
+
+.carousel-indicators [data-bs-target]{
+    background-color: #222;
+    opacity: 0.8;
+} /* aparecer mais a seta e as barras que ficam em baixo*/
+
+.carousel-indicators .active {
+    background-color: #000;
+} /* Quando a imagem estiver a barrinha de baixo ficara mais escura*/
+
+/* Estou trabalhando da resolução da menor para a maior, dentro do caroseul*/
+@media(min-width: 768px) {
+    #slider .carousel-caption {
+        bottom: 15em;
+    }
+    #slider .carousel-caption h5 {
+        font-size: 4em;
+        text-shadow: #000 2px 3px;
+    } /* Mexeu com minha letra , shadow, sombreado*/ 
+    #slider .btn {
+        padding: 0.6 1.6em;
+        font-size: 1.2em;
+    } /* (padding) tamanho do meu botão no meio do caroseul em tela cheia */
+
+    .carousel-indicators {
+        bottom: 7em;
+    }
+} /* Botão no meio da tela */
+
+
+
+
+/* IMAGENS DE PASTICO UMA AO LADO DA OUTRA */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+figure.snip0015 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+}
+figure.snip0015 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0015 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0015 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3em 3em;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0015 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  bottom: 50%;
+  left: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0015 h2,
+figure.snip0015 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0015 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0015 h2 span {
+  font-weight: 800;
+}
+figure.snip0015 p {
+  font-weight: 200	;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0015 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0015:hover img {
+  opacity: 0.35;
+}
+figure.snip0015:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0015:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0015:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  top: 30px;
+  bottom: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/* IMAGENS DE PASTICO UMA AO LADO DA OUTRA */
+
+
+
+
+
+
+
+
+/* MINI BANNER */
+/*#mini-banners{
+    margin-bottom: 4em;
+} *//* espaçando o conteúdo para fica rm baixo dele, e nao ficar colado na div*/
+
+/*#mini-banners .card{
+    padding: 2em 0.3em;
+    border-radius: 0;
+    margin-bottom: 1em; */
+ /*}Mobile ajustar o tamanho dentro do banner */
+
+/* #mini-banner img{
+font-size: 1em; 
+
+}  Seria para aumentar os icones*/
+
+
+/*#mini-banners .card-title {
+    margin-bottom: 1.5em;
+} */ /* separa mais os conteúdos, afastando o titulo do texto */
+
+/*#mini-banners .btn {
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+} *//* alterar o botão do mini banner*/
+
+/*  segunda midia */
+/*@media(min-width: 768px) {
+   /* #mini-banners {
+        margin-top: -6em;
+        }   aqui que dá o efeito de sobreposição no carrossel que estava antes.*/
+   /* }*/ 
+
+
+/* DESTAQUES */
+/* espaçamento para a proxima seção do site*/
+#featured-container{
+    margin-bottom: 4em;
+} /* */
+
+.title {
+    font-size: 1.75em;
+    margin-bottom: 0.4em;
+    position: relative;
+} /* conteúdo com pseudelemento em cima de titulo, por isso ser relativo */
+
+.title:before{
+    width:75px;
+    border-top: 4px solid #7a7a7a;
+    content: '';
+    position: absolute;
+    bottom: 2em
+} /* Representa o traço acima dos destaques */ 
+
+#featured-images {
+    margin-top: 1em
+} /* proprio container das imagens e posiciona elas em relação ao tema acima*/
+
+#featured-images .col-md-4{
+    position: relative;
+    cursor: pointer;
+}/* as colunas md-4 teração posição relativa
+Cursos:pointer: o texto tera posção relativa em relaçãO A IMAGEM e para o usuario saber que tem uma açao quando passa o mouse sobre a imagem*/
+
+#featured-images .col-md-4:hover > .banner-content { /*(hover)o que ativa a opacidade*/
+    opacity: 0.8;
+} /*Quando o usuario fizer um hover em cada imagem , ele vai afetar o elemento filho chamado (.banner-content) que vai mudar a opacidade da imagem para 0.8*/
+
+#featured-images .banner-content {
+    position: absolute; /* posição do texto*/
+    top: 0; /* firá no top*/
+    left: 0; /* ficará no topo*/
+    height: 100%; /* Altura de 100% da imagem */
+    width: 100%; /* Largura de 100% da imagem*/
+    background-color: #fff; /* Cor de fundo branca*/
+    display: flex; /*para centralizar melhor os itens, assim pega horizontal e vertical */
+    justify-content: center; /* Centralizou*/
+    align-items: center; /* alinhou os itens no centro */
+    flex-direction: column; /*O titulo ficou a baixo do texto */
+    opacity: 0.6; /*É aqui que deixa a imagem com opacidade, um leve sombreado sobre a imagem */
+    transition: 0.5s; /* o tempo que será aguardado para a animação terminar*/
+}/* texto vai ficar sobre a imagem dos destaques*/
+
+@media(min-width: 768px){ /*Edda media é para o hover funcionar só quando o usuario passar o mouse em cima da imagem*/
+    .title {  /*O titulo padrão*/
+        font-size: 2.4em;
+    }
+    .title:before{ /* aumentar o espaçamento para não ultrapassar a fonte.*/
+        bottom: 1.5em;
+    }
+    #featured-images .banner-content{ /* Aqui eu tiro a opacidade para a imagem aparecer normalmente */
+        opacity: 0;
+    }
+} 
+/*/DESTAQUES */
+
+
+
+/* INFO*/
+
+#info-content {
+    margin-bottom: 4em; /*Separar do footer*/
+    padding: 4em 1em; /* Criando um espaçamento na parte superior e inferior do conteúdo interno dos dados */
+} 
+
+#indo-numbers {
+    margin: 1.5em 0; /* Aqui separa o botão do texto*/
+}
+
+#info-banner{ /* estilo da imagem*/
+    display: flex; /* */
+    align-items: center; /*para imagem ficar no centro do conteúdo */
+    margin-bottom: 2.5em;
+} 
+
+#info-numbers h3{
+    font-size: 3em; /* tamanho dos números*/
+} 
+
+@media(min-width: 768px){ 
+    #info-content{
+        padding: 3.5em; /* Espaçamentos de todo o texto*/
+    }
+} 
+
+/* FOOTER TOP */
+#footer {
+    padding: 1em 1.5em;
+} /* padding lateral e superior, para não ficar colado*/
+
+#footer-top {
+    margin-bottom: 0.5em;
+} /*separa o conteúdo do meio */
+
+#footer-top,
+#footer-top i {
+    color: #fff;
+} /* Tudo que estiver nesse footer-top de texto tera uma cor especifica*/
+
+#social-icons {
+    text-align: right;
+} /* Como os icones são fonte de texto, eu consigo jogar eles para a direita utilizando text-align: right */
+
+#social-icons i {
+    margin-right: 1em; /*espaçando os icones */
+    font-size: 1.5em; /*temanho deles */
+    cursor: pointer; /* para lincar com a rede social */
+}
+
+#social-icons i:hover {
+    color: #7a7a7a;  /* qnd o mouse passar pelo icone */
+}
+ /*/Footer top */
+
+
+/* FOOTER DETAILS*/
+
+#footer-details {
+    margin-bottom: 0em;
+} /*Separar do conteúdo que vem a baixo*/
+
+#news-container,
+#contact-container,
+#links-container {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+} /* para o mobile*/
+
+#footer-details h4{
+    color: #FFF;
+    margin-bottom: 1.5em; /* Espaço do conteúdo que está a baixo do titulo*/
+} /*titulo do footer/
+
+#news-container input {
+    border-radius: 0;
+    border: none;
+} /* */
+
+#link-container li{
+    margin-bottom: 0.5em;
+} /* afastando os links para que o usuario possa clicar de forma melhor*/
+
+#link-container a {
+    text-decoration: none;
+}/*tirar qualquer decoração que tenha no link */
+
+#link-container a:hover {
+    color: #fff;
+} /*deixa o houver visto */
+
+
+/* FOOTER BOTTOM */
+
+#footer-botoom {
+    border-top: 1px solid #a7a7a7;
+    padding-top: 2em;
+} /*linha para divião do conteúdo de forma horizontal */
+
+#footer-botoom i {
+    color: #e61e10; /* icone de coração*/
+    margin-left: 0.3em; /* afastar do texto */
+} 
+
+@media(min-width: 768px){ /*(min-width: 768px)representa web, que será do menor para o*/
+
+    #news-container {
+        padding-right: 2em; /* conteúdo do meio*/
+    }
+    #links-container {
+        padding-left: 2em; /* espaçando o conteúdo que está no canto direto*/
+    }
+    #news-container {
+        padding: 0 2em; /* realizando a divisão entre os lados*/
+        border-left: 1px solid #7a7a7a; /* colocando uma divisão entre os lados*/
+        border-right: 1px solid #7a7a7a;
+    }
+} /* */
+ /* */ 
+ 

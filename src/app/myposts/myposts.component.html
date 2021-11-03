@@ -1,0 +1,196 @@
+<div class="container-fluid bg-light">
+ 
+  <div class="d-flex justify-content-center">
+  <p class="fs-6"></p>
+  </div>
+  <div class="row">
+    
+    <!--Primeira Camada-->
+    <!--Espaçao do menu-->
+      <div class="col-3">
+
+          <app-barra-lateral></app-barra-lateral>
+       
+      </div>
+      
+      
+      
+      
+      
+      
+      
+          <!--Segunda Camada-->      
+          <div class="col-9 ">
+         <div class="row">
+      <div class="col-7 "> 
+  
+        
+
+
+        <div class="row" *ngFor="let item of usuario.postagem | orderBy : key : reverse">  
+          <!--  
+              <div class="row" *ngFor="  let tema of listaTemas"></div>
+              <div class="row" *ngFor="let itemm of tema.postagem "> </div> -->
+           <div class="col-12 ">    
+                     
+           
+            
+          
+              <div class="postagens-amigos">
+                   <!-- <div class="card-columns" ></div> -->
+                   <div class="row">
+                    <div class="col-1"><img src="{{foto}}" alt="" width="40px" class="foto"></div>
+                    <div class="col-10 nome-amigo">  
+                        <div class="row">
+                          <div class="col-md-1 d-flex justify-content-center align-content-center"></div> <p class="name-friend">{{nome}}</p>
+                        </div>
+                    
+                        <!-- <div class="d-flex justify-content-center align-content-center"><h4>{{item.titulo}}</h4></div> -->
+                        <div class="d-flex justify-content-center text11">
+                          <img class="text-friends fotoTema" src="{{item.tema.fotoLink}}">
+              
+              
+                            </div>
+                        <div class="d-flex justify-content-center text11">
+                        <p class="text-friends">{{item.texto}}</p>
+            
+            
+                          </div>
+                            <div class="d-flex justify-content-center">
+                         
+          
+                   
+                  
+                      
+                        <div class="row">
+                            <div class="col-12">
+                    <p class="card-text">
+                        <small class="text-muted">
+                          <button class="btn" (click)='this.getPostagemById(item.id)' (click)='this.curtida(item.id)'><i class="fas fa-recycle"></i>
+                          </button>
+                         Pontos:{{item.curtidos}}
+                         <button  data-toggle="modal"data-target="#modalPresentes" class="btn" ><i class="fas fa-users pessoas"></i>
+                         </button>
+                        Presentes :{{item.presentes}}
+
+                          <br>     </small>
+                         <div class="d-flex justify-content-center">
+                          <small class="text-muted">
+                    {{ item.data | date: "dd/MM/yyyy" }} às
+                    {{ item.data | date: "HH:mm" }}
+                  </small>
+                        
+                   </div>
+                   <div class="altura"></div>
+                    <div class="d-flex justify-content-center">
+                  <a
+                  [routerLink]="['/postagem-edit', item.id]"
+                  class="btn btn-outline-dark mr-3 botao"
+                  >Editar</a
+                >
+                <a
+                  [routerLink]="['/postagem-delete', item.id]"
+                  class="btn btn-outline-danger botao"
+                  >Apagar</a
+                ></div>
+                <div class="altura"></div>
+               </div>
+                       </div>
+                       
+                
+                  
+                 
+              
+               
+             </div>
+           
+          </div>
+               </div>  
+          
+              <!--fim das colunas-->
+            
+            
+          
+          
+            <!--Fim de todas as postagens-->
+            
+          
+            
+           
+          
+          </div>
+            <div class="separar"></div>
+          
+                    </div>  
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+                 
+                    <div class="modal d-flex-justify-content-center align-content-center" tabindex="-1" id="modalPresentes">
+                      <div class="modal-dialog modals modal-dialog-centered">
+                        <div class="modal-content text-friends">
+                            <div class="d-flex justify-content-center">
+                            <h5 class="modal-title">Participe desta coleta</h5>
+                            </div>
+                        
+                          <div class="modal-body">
+                              <p>Caso queira participar desta coleta clique em "confirmar participação"
+                              
+                              </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn botaoModalCancelar" data-dismiss="modal">Cancelar Participação</button>
+                            <button type="button" class="btn botaoModalSave" (click)='this.getPostagemById(item.id)' (click)='this.marcada(item.id)' data-dismiss="modal">Confirmar Presença</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+          
+          
+          </div>
+
+
+
+
+
+
+   
+        
+                
+                 </div>
+                
+                  <div class="col-5">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-11">
+
+                        <app-barra-lateral-direita></app-barra-lateral-direita>
+
+                     
+                  
+
+
+              </div>
+                  </div></div>
+
+                 </div>  
+                
+
+ 
+  <div class="separar"></div>
+
+  
+    </div>
+
+
+    

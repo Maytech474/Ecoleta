@@ -1,0 +1,119 @@
+<!-- Está pegando um container fluid inteiro, para pegar toeda a tela. -->
+
+<div class="container-fluid"> <!-- Pega tudo -->
+
+    <div class="row">
+
+        <div class="col-md-6" id="img-bg">  </div>
+            <!-- Essa col será para as 6 colunas do lado direito -->
+            <div class="col-md-6 mt-5 mb-5"> 
+                <!--  Aqui vou centralizar todo o conteúdo, vai utilizar apenas 6 colunas, e por ser pouco, o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
+                <div class="row d-flex justify-content-center"> 
+                    <div class="col-md-10">
+                        <h1 class="text-center">Cadastro</h1>
+
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input [(ngModel)]="usuario.nome" type="text" class="form-control"  class="form-control" name="nome" id="nome" placeholder="Seu nome"> 
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="usuario">Usuário Novo</label>
+                            <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
+
+                            <label for="usuario">Usuário</label>
+                            <input [(ngModel)]="usuario.usuario"  class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input [(ngModel)]="usuario.email"  class="form-control" type="text" name="email" id="email" placeholder="Seu email"> 
+
+                        </div>
+
+<!-- Novo -->
+                        <div class="form-group">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input class="form-control" type="text" name="Sobrenome" id="Sobrenome" placeholder="Seu Sobrenome"> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="cep">Cep</label>
+                            <input class="form-control" type="text" name="Cep" id="Cep" placeholder="Seu Cep"> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="endereço">Endereço</label>
+                            <input class="form-control" type="text" name="Endereço" id="Endereço" placeholder="Seu Endereço"> 
+                        </div>
+
+                        <!-- um do lado do outro-->
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input class="form-control" type="text" name="Estado" id="Estado" placeholder="Seu Estado"> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input class="form-control" type="text" name="Cidade" id="Cidade" placeholder="Seu Cidade"> 
+                        </div>
+                        <!--/um do lado do outro-->
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="text" name="Eimail" id="E-mail" placeholder="Seu E-mail"> 
+                        </div>
+
+<!--/Novo -->
+
+                    
+
+                        <div class="form-group">
+                            <label for="foto">Link da Foto</label>
+                            <input  [(ngModel)]="usuario.foto" class="form-control" type="text" name="link-foto" id="link-foto" placeholder="Link da sua foto"> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input (input)='confirmSenha($event)'  class="form-control" type="password" name="senha" id="senha" placeholder="Seu senha"> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ConfirmSenha">Confirmar Senha</label>
+                            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="ConfirmSenha" id="ConfirmSenha" placeholder="Confirme sua Senha">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tipo">Tipo de Usuário</label>
+                            <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
+                                <option>Selecione um tipo de usuário: </option>
+                                <option value="normal">Normal</option>
+                                <option value="adm">Administrador </option>
+                            </select>
+                        </div>
+                        
+                        <!-- Vou colocar os botões dentro de uma div, para poder centralizar eles-->
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn  btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
+
+                            <button type="submit" class="btn btn-success " >Cadastrar</button>
+                            <!-- -->
+
+                            <button type="submit" class="btn btn-success " (click)="cadastrarUsuario()">Cadastrar</button>
+                            <!-- Os meus botões ficam grudados, pq?  -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+.body{
+   background-color: hsl(110, 66%, 94%);
+   height: 100%;
+}
+
+
+@media(max-width:1500px){
+
+}
+
+.card{
+    width: 100%;
+    height: 2rem;
+  
+}
+
+.bottom1{
+    background: linear-gradient(to right, #0981a6, #4de7c1);
+}
+.bottom1:hover{
+    background:linear-gradient(to right, #09A64E, #97e74d);
+}
+
+.separacao{
+    height: 1rem;
+}
+
+.card-cinza{
+
+    border-radius: 15px;
+    min-height:3rem;
+    border: solid 1px hsl(110, 66%, 94%); ;
+    width: 80%;
+}
+.centralizar-card{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card11{ 
+    background:white;
+    
+    border-radius: 15px;
+    border:solid 1px #0de76f;
+  
+
+
+}
+.card11:hover{
+    box-shadow: 3px 3px 3px 3px #0de76f;
+}
+.foto{
+    border-radius: 50px;
+    margin-top:1rem;    
+    margin-left: 1rem;
+}
+i{
+    
+    display: flex;
+    margin-top:0.2rem ;
+}
+
+.box-dos-icons{
+    margin-top:1rem
+} p{
+    margin-top: 1.2rem;
+    font-size: 0.7rem;
+}
+
+.separacao-boxs{
+    height:3%
+}
+.postagens-amigos{
+    width: 100%;
+    background:white;
+    border-radius: 15px;
+    border:solid 1px #0de76f;
+
+    /* height:15rem; */
+    
+
+}
+.postagens-amigos:hover{
+box-shadow: 3px 3px 3px 3px #0de76f;
+} 
+.separar{
+    height:1rem;
+}
+.nome-amigo{
+    margin-top:0.3rem;
+   
+    font-family:bold;
+}
+.imagem-amigo{
+    width: 100%;  
+     margin-left:15rem;
+}
+.cotainer-imagem-amigo{
+    display: flex;
+    justify-content: center;
+  
+    width: 10rem;  
+}
+
+   a {
+  
+    color: white;
+    border: white;
+   }
+   .card-cinza{
+       height: 1rem;
+   }
+   .texto-postagem{
+    font-size: 5rem;
+   }
+
+   .quadrado3{
+       width: 9rem;
+       background-color:purple;
+   }
+   .input{
+      margin-top: 1rem;
+       width:20rem;
+        font-size:10px;
+        border-radius: 10px;
+   }
+
+   .box-input{
+        width:80%;   
+        background:white;
+        /* margin-right: 1rem; */
+        border-radius:10px;
+
+   }
+  
+   i{
+       font-size:2rem
+   }
+
+   .retangulo{
+    height:200px;
+
+       /* max-height: 11rem; */
+   }
+
+.text11{
+    font-size:2rem;
+}
+
+
+.name-friend{
+    font-size: 17px ;
+    font-family: 'Roboto bold', sans-serif;
+}
+.text-friends{
+    font-size:20px;
+}
+.inputtt{
+    width:100px ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.grid{
+    margin: 80px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    align-items: center;
+}
+.grid > article{
+    background:linear-gradient(to right, #09A64E, #97e74d);
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;transition: transform .3s;
+
+}
+.grid > article:hover{
+    transform: translateY(5px);
+    box-shadow:2px 2px 26px 0px rgba(0,0,0,0.3);
+
+}
+
+.grid > article img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.text{
+    padding: 0 20px 20px;
+}
+.text h3{
+    text-transform: uppercase;  
+}
+.text button{
+    background: linear-gradient(to right, #0981a6, #4de7c1);
+    border-radius:20px;
+    border:none;
+    color:#fff;
+    padding:10px;
+    width:100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid > article{
+        text-align: center;
+    }
+}
+ .height{
+    height: 20px;
+}
+
+.modals{
+    width: 50%;
+  
+}
+.botaoModalSave{
+    background:linear-gradient(to right, #0981a6, #4de7c1);
+    color: #fff;
+    border:white ;
+    border-radius:20px;
+}
+.botaoModalCancelar{
+    background:linear-gradient(to right,#ee102e, #dd9492e1) ;
+    color: white;
+    border:white;
+    border-radius: 20px;
+}
+/* .{
+    font-size:1.5rem;  
+    display: flex;
+    margin-top:0.2rem ;
+   color: #18fc10
+} */
+.reciclagem{
+    color: #18fc10 ;
+}
+.text-telocalidade{
+    font-size: 11px;
+}
+.local{
+    padding: 0px;
+}
+
+.fotoTema{
+    width: 70px;
+}

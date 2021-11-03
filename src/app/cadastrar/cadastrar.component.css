@@ -1,0 +1,14 @@
+#img-bg { 
+    background-image: url(../../assets/img/foflagem.jpg); /* referencia a imagem para a pagina */
+
+    
+    min-height: 695px;/* Tamanho da imagem na tela */
+
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repetir imagem */
+    background-size: cover; /* Preencher todo espaço que tem com a imagem */
+
+}
+
+
+

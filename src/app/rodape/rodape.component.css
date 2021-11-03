@@ -1,0 +1,37 @@
+uul.social-network{ /* class ul -  */
+    list-style: none; /* Para tirar os pontos do lado dos icones*/
+     /* Seria para colocar um ao lado do outro, mas não está funcionando*/
+    padding: 0;
+}
+
+ul.social-network li{ /* Foi criado esse ul para atigir as li que estão dentro delas*/
+    display: inline; /*Ele tentou usar na ul.social-network sem o li , mas não funcionou , teve que abrir essa li para deixar os ICONES um do LADO do outro*/
+    margin: 0;
+    padding: 5px; /*Para aumentar o espaçamento  na li, ou seja, nos icones*/
+}
+
+/* Como todos os icones tem o " fa " como class, vamos referencia-la para mudar os icones*/
+.fa{
+    font-size: 35pt; /*Para Aumentar o icone que está como fonte*/
+    color:  white; /* Mudar as cores dos icones aqui referenciado*/
+    padding: 10px; /*Para aumentar o espaçamento entre os icones*/
+}
+/* para passa o mouse e mudar de cor, vou refenciar a classe a baixo com o houver e color. */ 
+.fa-facebook-square:hover{ /* hover(para funcionar na hora que passar o mouse e as cores referenciadas aparecerem)*/
+    color: #3b5998;
+}
+
+.fa-instagram:hover{
+    color: #c13584;
+}
+
+.fa-linkedin-square:hover{
+    color: #0072b1;
+}
+
+.bg-fundoVerde{
+    background: #02411d ;
+}
+.rodape{
+    background:#02411d;
+}

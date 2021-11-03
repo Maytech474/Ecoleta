@@ -1,1 +1,56 @@
-<p>rodape works!</p>
+<footer class="page-footer font-small rodape pt-4">
+    <!--footer(representa o rodapé p/ seu sectioning content/conteúdo d seção) -->
+    <!-- font-small(Deixar a fonte menor)-->
+    <!-- bg-secondary(Cor de fundo que estamos usando no rodapé)-->
+        <div class="container"> <!-- container(componente do bootstrap q garante q o layout vai ficar alinhado corretamente na página.Seguindo divisão entre as colunas estabelecidas)-->
+            <div class="row">
+                <!--row(Ela delimita as linhas do container, ou seja, das colunas de forma "individual")-->
+                <div class="col-md-12 d-flex justify-content-center">
+                <!--col(Dentro da row teremos as colunas)  -->
+                <!--md(médio-tamanho da coluna média.logo em seguida indicando a quaitidade de coluna)-->
+                <!--justify-content-cente(justificar conteúdo  centro /Deixar conteúdo centralizado)   -->
+                    <h4 class="text-white"> Siga-nos nas redes sociais</h4>
+                    <!--text-white(Meu texto vai ficar branco)-->
+                </div>
+            </div>
+                <!--Dentro desse mesmo container vou criar uma (NOVA LINHA-horizontal)-->
+                <!--row(NOVA LINHA)-->
+            <div class="row">
+                <!--flexbox-Ajuda a distribuir items dentro do container -->
+                <div class="col-md-12 d-flex justify-content-center">
+                    <!--d-flex(display(sxibir)flex/flexbox)-->
+                
+                    <!-- ICONES REDES SOCIAS -->
+                    <ul class="social-network"> <!--Classe criada q será feita conexão no CSS-->
+                        <li>  <!--target="_blank"  (para o link facebook abrir em uma nova pagina)-->  
+                            <a href="https://www.facebook.com/" target="_blank" class="icoFacebook">
+                                <!--<i> Link a baixo foi pego na pagina fontawesome.com -->
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" class="icoInstagram">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://www.linkedin.com" target="_blank" class="icoLinkedin">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-copyryght  bg-fundoVerde text-center py-3"><!--py-3(p Largura / y Altura )-->
+            <span class="text-light">  © 2021 Copyright: </span>
+            <a class="text-light" target="_blank" href="https://brasil.generation.org">brasil.generation.org</a>
+        </div>
+        </div>
+    
+    
+
+                
+    </footer>

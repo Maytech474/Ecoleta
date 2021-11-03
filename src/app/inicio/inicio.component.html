@@ -1,0 +1,337 @@
+<div class="container-fluid bg-light">
+ 
+  <div class="d-flex justify-content-center">
+  <p class="fs-6"></p>
+  </div>
+  <div class="row">
+    
+    <!--Primeira Camada-->
+    <!--Espaçao do menu-->
+      <div class="col-3">
+
+
+
+        
+
+       
+      </div>
+      
+      
+      
+      
+      
+      
+      
+          <!--Segunda Camada-->      
+          <div class="col-9 ">
+         <div class="row">
+      <div class="col-7 "> 
+  
+        
+
+        <div class="retangulo card11"> 
+  
+        
+   
+        
+          
+          <div class="row">
+            <div class="col-1">
+              <img class="foto" src="{{foto}}
+           " alt="" width="50px" height="50px"> </div>
+            <div class="col-11">
+          <div class="card-body "> 
+            <div class="centralizar-card">
+
+            <div class="card-cinza bg-light">
+            <p class="card-text"></p>
+            
+          </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-1"></div>
+            <div class="box-dos-icons">
+          <i class="fas fa-address-card"></i></div>
+            <div class="col-8">
+          
+          
+              <div class="separacao"></div>
+                
+         
+                <a class="btn bottom1 mr-2"routerLink="/tipo-postagens">Postar</a>
+
+           
+          <!-- href="#postagens" data-toggle="modal" data-target="#novaPostagem" -->
+          
+          
+                </div>
+                </div>
+      
+                </div>
+                </div> 
+                 </div>   
+                  
+                
+                 </div>
+                
+
+
+                  <div class="height"></div>
+
+
+
+
+
+
+
+        <div class="row" *ngFor="let item of listaPostagens | orderBy : key : reverse ">   
+           <!-- <div *ngFor="let tema of listaTemas"> -->
+                    <!-- <div *ngFor="let item of tema.postagem"> -->
+          <!-- 
+              <div class="row" *ngFor="  let tema of listaTemas"></div>
+              <div class="row" *ngFor="let itemm of tema.postagem "> </div> -->
+           <div class="col-12 ">    
+                     
+           
+
+            
+
+
+               
+                      <!-- <div class="card-body">
+                        <h5 class="card-title m-0">{{ item.titulo }}</h5>
+                        <p class="card-text mt-3">{{ item.texto }}</p>
+                        <p class="card-text">
+                          <small class="text-muted">
+                            {{ item.data | date: "dd/MM/yyyy" }} às
+                            {{ item.data | date: "HH:mm" }}
+                          </small>
+                        </p>
+            
+                        <p class="card-text">
+                          <small class="text-muted"> by: {{ item.usuario.nome }} </small>
+                        </p>
+                      </div> -->
+                    <!-- </div> -->
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+          
+              <div class="postagens-amigos">
+                   <!-- <div class="card-columns" ></div> -->
+                   <div class="row">
+                    <div class="col-1"><img src="{{item.usuario.foto}}" alt="" width="40px" class="foto"></div>
+                    <div class="col-10 nome-amigo">  
+                        <div class="row">
+                          <div class="col-md-1 d-flex justify-content-center align-content-center"></div> <p class="name-friend">{{item.usuario.nome}}</p>
+               
+                        </div>
+                    
+                        <!-- <div class="d-flex justify-content-center align-content-center"><h4>{{item.titulo}}</h4></div> -->
+                        <div class="d-flex justify-content-center text11">
+                          <img class="text-friends fotoTema" src="{{item.tema.fotoLink}}">
+              
+              
+                            </div>
+                        <div class="d-flex justify-content-center text11">
+                        <p class="text-friends">{{item.texto}}</p>
+            
+            
+                          </div>
+
+
+                          <div class="modal d-flex-justify-content-center align-content-center" tabindex="-1" id="modalPresentes">
+                            <div class="modal-dialog modals modal-dialog-centered">
+                              <div class="modal-content text-friends">
+                                  <div class="d-flex justify-content-center">
+                                  <h5 class="modal-title">Participe desta coleta</h5>
+                                  </div>
+                              
+                                <div class="modal-body">
+                                    <p>Caso queira participar desta coleta clique em "confirmar participação"</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn botaoModalCancelar" data-dismiss="modal">Cancelar Participação</button>
+                                  <button type="button" class="btn botaoModalSave" (click)='this.getPostagemById(item.id)' (click)='this.marcada(item.id)' data-dismiss="modal">Confirmar Presença</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                            <div class="d-flex justify-content-center">
+                         
+          
+                      
+                        <div class="row">
+                            <div class="col-12">
+
+                             
+                             
+                             
+                              <div class="d-flex justify-content-center text11 local">
+                                <p class="text-telocalidade">Endereço:{{item.localidade}}</p>
+                               
+                                </div>
+
+                                
+                                 
+                                <div class="d-flex justify-content-center text11"> 
+                                     <p class="text-telocalidade">Telefone: {{item.numeroTelefone}}</p>
+                               <img src="  {{item.tema.fotoLink}}" alt="">    
+                           </div>  
+                    <p class="card-text">
+                        <small class="text-muted">
+                          <button class="btn" (click)='this.getPostagemById(item.id)' (click)='this.curtida(item.id)'><i class="fas fa-recycle reciclagem"></i>
+                          
+                          </button>  Pontos :{{item.curtidos}}
+                          <button  data-toggle="modal"data-target="#modalPresentes" class="btn" ><i class="fas fa-users"></i>
+                          </button>
+                         Presentes :{{item.presentes}}
+                        
+                        </small>
+                        </p> 
+                        
+                 
+                   
+                      <div class="d-flex justify-content-center">
+                    <small class="text-muted">
+                    {{ item.data | date: "dd/MM/yyyy" }} às
+                    {{ item.data | date: "HH:mm" }}
+                  </small></div>
+               </div>
+                       </div>
+                       
+                
+                  
+                 
+              
+               
+             </div>
+           
+          </div>
+               </div>  
+          
+              <!--fim das colunas-->
+            
+            
+          
+          
+            <!--Fim de todas as postagens-->
+            
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+          
+             </div>
+           
+           <div class="separar"></div>
+          </div>
+           
+          
+
+                     
+
+
+
+
+
+
+
+
+
+          
+          
+          
+          </div>
+
+
+
+
+
+
+   
+        
+                
+                 </div>
+                
+                  <div class="col-5">
+                    <div class="row">
+                      <div class="col-1"></div>
+                      <div class="col-11">
+
+
+
+
+
+                        
+                   
+<div class="container-fluid">
+  
+<div class="container1">
+    <div *ngFor="let item of listaTrends">
+  
+        <main class="grid">
+        <article>
+            <img src="{{item.fotoLink}}" alt="">
+            <div class="text">
+                <h3>{{item.descricao}}</h3>
+                <!-- <p>lorem ipsum dolor sit am lorem ipsum lorem ipsum</p> -->
+                
+             <button><a class="a" href="https://www.ecycle.com.br/reciclagem/"> Saiba mais</a></button>
+            </div>
+        </article>
+    </main>
+
+    </div>
+
+</div>
+
+</div>
+              </div>
+                  </div></div>
+
+                 </div>  
+                
+              <!-- <div class="separacao-boxs"></div>
+     -->
+
+        
+      <!--Seg-->  
+     
+      <!--Todas as postagens-->
+ 
+  <div class="separar"></div>
+
+
+    </div>
+
+  
+
+
+ 

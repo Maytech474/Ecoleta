@@ -1,0 +1,119 @@
+
+.body {
+    background: #F6F9FF;
+    height: 100vh;
+   width: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #434343;
+
+    font-size: 16px;
+    
+}
+.card{
+    display: flex;
+    
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    
+}
+
+.cards .card {
+    display: flex;
+     flex-direction: flex; 
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    height: 370px;
+    /* max-height: 468px; */
+    width:15rem;
+    margin-left: 32px; 
+}
+ 
+
+.cards .card:first-child {
+    margin-left: 0;
+}
+
+.cards .card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+.cards .card img {
+    width: 100%;
+}
+
+.cards .card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+.cards .card span {
+    font-weight: 300;
+     max-width: 240px; 
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+.cards .card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+.cards .card.contact button {
+    background: linear-gradient(to right, #09A64E, #97e74d);
+}
+
+
+
+.cards .card.contact {
+    box-shadow: 20px 20px 50px -30px #09A64E;
+}
+
+
+@media screen and (max-width: 720px) {
+    .cards {
+        flex-direction: flex;
+    }
+
+    .cards .card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    .cards .card:last-child {
+        margin-bottom: 0;
+    }
+
+    .cards .card button {
+        font-size: 70%;
+    }
+
+}
+/* .height{
+    height:2rem;
+} */
+.contact{
+    width:5rem;
+
+}
+.height{
+    height:1rem;
+}

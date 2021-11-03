@@ -1,0 +1,63 @@
+
+.icons{
+    font-size:2rem;
+}
+
+.texto{
+    font-size: 80;
+}
+.barra{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    min-height: 9rem;
+    height:36rem;
+        background:#123417;
+
+}
+li:hover{
+        color: blue;
+}
+i{
+    font-size: 2.2rem;
+    padding-right: 1rem;
+    color:white;
+}
+a{
+    font-size: 1.3rem;
+    color:white;
+}
+
+li{
+    padding-top:25%;
+}
+@media(max-width:1280px){
+    a {
+        font-size:1.1rem;
+    }
+
+    i{
+        font-size: 1,1rem;
+    }
+    @media(max-width:1261px){
+        a{
+           font-size: 0px;
+        }
+        i{
+           font-size: 1.5rem;
+          
+        }
+        
+        .barra{
+            display:flex;
+            justify-content: center;
+            text-align: center;
+         
+          
+        }  
+        @media(max-width:600px){
+           
+        
+            }
+        
+    }
+}

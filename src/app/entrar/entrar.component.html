@@ -1,0 +1,823 @@
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> <!--criar a estrutura necessária para o icone-->
+    <!--GOOGLE FONTS - lato-->
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https: //fonts.googleapis.com/css2? família = PT + Sans: ital, wght @ 0,400; 0,700; 1,400; 1,700 &família = Roboto + Placa: peso @ 100; 200; 300; 400; 500; 600; 700; 800; 900 & display = swap "rel =" stylesheet ">
+    <!-- CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+    <!--Bootstrap Icone-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="../entrar/entrar.component.css" />
+    <!-- JavaScript Bootstrap -->
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+    </script>
+    </head>
+    
+    
+    <header>
+        <img src="../../assets/Logo/Ecoleta .gif" id="coleta-img" alt="Casa 1" class="d-block w-100">
+    </header>
+    
+    
+    <body>
+    <!-- NAVBAR-->
+        <!--(aticky-top)menu solto. |(navbar-expand-lg)vai deixar expandida quando a tela for grande. |(bg-primary-color)minha classe do menu  -->
+        <nav class=" navbar-light sticky-top navbar navbar-expand-lg  bg-primary-color"  id="navbar"><!--essa div finaliza lo-->
+            <!--Containe pq terá varios elementos. |(py-3) deixa espaço entre os elementos do menu e topo do site.-->
+            <div class="container py-3"> 
+                <!--(a)para ser lincado com algo. |(href="#")Por enquanto link cego. |-->
+                <a href="#" class="navbar-brand primary-color"> 
+                    <!--Logo-->
+                    <img src="../../assets/Logo/logoescurosemfundo.svg" alt="" width="90px" height="90px" class="img-fluid rounded-circle">
+                    <span></span> <!--SRC representa o logo no canto superior da tela-->
+                </a><!--NÃO CONSIGO AUMENTA O LOGO, COMO FAZER?-->
+    
+                <!--ngbotão de qnd estiver responsivo-->
+                <!--(bs)ACHO QUE VAI TER QUE TIRAR ESSE BS AO LADO DA DATA. |(data-toggle="collapse")Ele vai colapçar algo, que no caso é o menu. |(data-bs-target=)é o meu algo, coisas para link, sãp os itens da barra de navegação. |(aria-label="toggle navigation")informando para q serve o botão q é label. |(<i class="bi bi-list"></i>)por enquanto será esse icone do bt. MAS, QUAL ICONE USAR PARA O BOTÃO DO MENU.-->
+                <button 
+                class="navbar-toggler" 
+                type="button"
+                data-toggle="collapse" 
+                data-target="#navbar-items"
+                aria-controls="navbar-items"
+                aria-expanded="false"
+                aria-label="toggle navigation">
+                <i class="bi bi-list"></i>
+                </button> <!--225-javascript-->
+               
+                <!--(class="collapse )que dizer que a barra de navegação terá um collapse, recolher. |(id="navbar-items")quer dizer que o botão afeta essa parte. |-->
+                <div class="collapse navbar-collapse" id="navbar-items"> 
+                    <!--(me-auto)itens com margem automatica dos itens na laterais. |(mb-2)mergem 2 qnd estiver mobile. |(mb-lg-0)-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!--Criando a barra de navegação.-->
+                        <li class="nav-item">
+                            <!--(a)para lincar p/ pagina. |(nav-link active)vai dar estilos extras a essa parte ara mostrar que é ele q está valido. (aria-current="page")só ocorrera na pagina que está ativa. |-->
+                            <a href="#" class="nav-link active" aria-current="page" >Home</a></li>
+                            <!--somente na pagina que está ativa24-->
+                            <li class="nav-item">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link primary-color"data-toggle="modal" data-target="#entrarUsuarioModal" >Entrar</a></li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link primary-color" data-toggle="modal" data-target="#addUsuarioModal">Cadastre-se</a></li>
+                                <!--<li class="nav-item">
+                                <a href="#" class="nav-link primary-color" >Sobre</a></li> -->
+                            <!--<li class="nav-item">
+                                <a href="#" class="nav-link primary-color" >Artes</a></li> -->
+                          <!--  <li class="nav-item">
+                            <a href="#" class="nav-link primary-color" >Contato</a></li>      -->         
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    
+        <!--/SLIDER-->
+        <!--MINI BANNERS-->
+         <!--  (offser) estou colocando uma coluna a esqeurda para centralizar melhor  -->
+         <!--Na (row) serve para escrever layout em linha onde é possivel comportar varias colunas até chegar no maximo de 12 e depois eu pulo para outra linha -->
+         <!--Dentro da Row, vou colocar uma col-12 pq eu qeuro q ocupe 12 colunar no mobile mas no md 4 -->
+         <!--(<div class="col-12 col-md-10 offser-md1-1 "). Os destaques só centralizaram qnd tirei esse código e deixei só o container.-->
+            
+            
+
+  
+<!-- IMAGENS DE PASTICO UMA AO LADO DA OUTRA-->
+
+<div class="container  "> 
+<div row class="row g-4" >
+    <div class="col-12 col-md-4">
+<figure class="snip0015 ">
+	<img src="https://i.imgur.com/sCEDV6D.png" alt="sample38"/>
+	<figcaption>
+		<h2> <span>O lixo</span> </h2>
+		<p> Flutua pelos mares de todo o mundo</p>
+		<a href="#"></a>
+	</figcaption>			
+</figure>
+</div>
+<div class="col-12 col-md-4">
+<figure class="snip0015">
+	<img src="https://i.imgur.com/DUt4RkS.png" alt="sample39"/>
+	<figcaption>
+		<h2>80% <span></span> </h2>
+		<p>São plasticos</p>
+		<a href="#"></a>
+	</figcaption>			
+</figure>
+</div>
+<div class="col-12 col-md-4">
+<figure class="snip0015">
+	<img src="https://i.imgur.com/CIjgx7c.png" alt="sample40"/>
+	<figcaption>
+		<h2>Entre <span></span><span>eles</span></h2>
+		<p>Sacolas e Garrafas</p>
+		<a href="#"></a>
+	</figcaption>			
+</figure>
+</div>
+</div>
+<br>
+</div>
+<!--/ IMAGENS DE PASTICO UMA AO LADO DA OUTRA-->
+
+
+   <!--
+            <div class="container-fluid" id="mini-banners"> -->
+                <!--(row)escrever em linha, aqui cabe 12 colunas para deixar mais card em uma linha tenho que ajustar por aqui.-->
+             <!--   <div class="row "> -->
+                    <!--(col-12)qnd for web (md-4)quando foi mobile-->
+                        <!--(card text-center)vai centralizar o texto dentro do card, ele tbm tras uma amargem para o texto do card.-->
+                      <!--  <div class="card-img-top " id="mini-1">
+                            <img src="https://i.imgur.com/sCEDV6D.png" alt="Projeto 1" class="img-fluid" width="700px"
+                            height="285px">
+                            
+                            <div class="card-body ">
+                                <h5 class="card-title primary-color">
+                                    Plastico nos Oceanos.
+                                </h5>
+                                <p class="card-text secodanry-color">
+                                    A Reciclagem do vidro é o processo pelo qual o vidro é reaproveitado para criar novos materiais, o processo se dá basicamente derretendo o vidro para sua reutilização. Dependendo da finalidade do seu uso, pode ser necessário separá-lo em cores diferentes. As três cores principais são: Vidro incolor Vidro verde 
+                                </p> -->
+                            <!--  <a href="#" class="btn btn-dark">Saber mais</a> -->
+                           <!-- </div>
+                        </div> 
+                    </div> -->
+                   <!-- <div class="col-12 col-md-3" 
+                        <div class="card-img-top"> -->
+                            <!--Icone acima do card-->
+                           <!-- <img src="https://i.imgur.com/X7gXvpk.png" alt="Projeto 1"  class="img-fluid" width="300px"
+                            height="285px">
+                           
+                            <div class="card-body">
+                                <h5 class="card-title primary-color">
+                                    PAPEL
+                                </h5>
+                                <p class="card-text secodanry-color">
+                                    A reciclagem de papel é o reaproveitamento do papel não-funcional para produzir papel reciclado. A reciclagem de papéis velhos visa o aproveitamento de fibras celulósicas dos papéis e cartões usados para a produção de papéis novos.
+                                </p> -->
+                               <!--  <a href="#" class="btn btn-dark">Saber mais</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--<div class="col-12 col-md-3 ">
+                        <div class="card-img-top">
+                            <img src="https://i.imgur.com/rYhzXS5.png" alt="Projeto 1" class="img-fluid" width="300px"
+                            height="285px">
+                           
+                            <div class="card-body">
+                                <h5 class="card-title primary-color">
+                                    ALUMÍNIO
+                                </h5>
+                                <p class="card-text secodanry-color">
+                                    A reciclagem do alumínio é o processo pelo qual o alumínio pode ser reutilizado em determinados produtos, após ter sido inicialmente produzido. O processo resume-se no derretimento do metal, o que é muito menos dispendioso e consome muito menos energia de semin do que produzir o alumínio.
+                                </p>
+                              
+                            </div>
+                        </div> 
+                    </div> -->
+                     <!--  <a href="#" class="btn btn-dark">Saber Mais</a>-->
+                   
+                     <!-- <div class="col-12 col-md-3">
+                        <div class="card-img-top"> -->
+                            <!--Icone acima do card-->
+                         <!--   <img src="https://i.imgur.com/Vx3XmDI.png" alt="Projeto 1" class="img-fluid" width="300px"
+                            height="285px">
+                            
+                            <div class="card-body">
+                                <h5 class="card-title primary-color">
+                                    ORGANICO
+                                </h5>
+                                <p class="card-text secodanry-color">
+                                    Existem duas formas de reciclar o lixo orgânico: a compostagem, gerando adubo para ser usado em plantações, e por meio da produção de biogás. O processo de compostagem pode ser definido como a reciclagem de matéria orgânica.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+            <!--    </div>
+            </div> -->
+             
+        <!--/MINI BANNERS-->
+       
+        <!--    -->
+        <!--    -->
+            
+    
+        
+        <!--SLIDER--> <!--TEM BS , SERÀ Q VAI TER Q TIRAR?-->
+        <!--vai separar essa parte do slider-->
+        <!-- <div class="container" id="slider-container"></div> Esse código deixa o carrossel em tamanho reduzido.-->
+            <!--criar o efeito carosel-->
+            <br><br>
+            <div class=" carousel slide" id="slider" data-ride="carousel">
+                <h2 class="title primary-color">SEPARANDO O LIXO</h2> 
+                <br><br>
+
+                <!--sessão de indicators uns,botões que ficam dentro do carosel -->
+               
+                <ol class="carousel-indicators">
+                    <li class="active" data-target="#slider" data-slide-to="0" aria-current="true" aria-label="Slide 1"></li>
+                    <li data-target="#slider" data-slide-to="1" aria-label="Slide 2"></li>
+                    <li data-target="#slider" data-slide-to="2" aria-label="Slide 3"></li>
+                </ol>
+                    <!--Conteúdo interno do carrousel-->
+                    <div class="carousel-inner">
+                        <!--Primeiro slide que será ativo.-->
+                        <div class="carousel-item active">
+                            <!--(d-block)displeyblock, oq? .| (w-100)para ocupar 100% do espaço disponivel. .|-->
+                            <img src="https://i.imgur.com/bUKyfBk.jpeg" alt="Casa 1" class="d-block w-100">
+                                <div class="carousel-caption">
+                                <H5>Separando o Lixo</H5>
+                                <a href="https://www.ecycle.com.br/separacao-de-lixo/" class="btn btn-dark">Pode começar dentro de casa</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.imgur.com/SwfhVKB.png" alt="Casa 2" class="d-block w-100">
+                            <div class="carousel-caption">
+                                <H5>Materiais Secos</H5>
+                                <a href="https://portais.univasf.edu.br/sustentabilidade/noticias-sustentaveis/lixo-seco-e-umido-entenda-os-conceitos-e-diferencas" class="btn btn-dark">Separado do Orgânico</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i.imgur.com/gnBSk9r.jpeg" alt="Casa 3" class="d-block w-100">
+                            <div class="carousel-caption">
+                                <H5>Materiais Orgânicos</H5>
+                                <a href="https://memoria.ebc.com.br/infantil/voce-sabia/2015/01/como-aproveitar-o-lixo-organico" class="btn btn-dark">Também servem como adubo</a>
+                            </div>
+                        </div>
+                    </div>
+                        <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-target="#slider"
+                        data-slide="prev"
+                        >
+                        <i class="bi bi-chevron-compact-left"></i>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+    
+                        <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-target="#slider"
+                        data-slide="next"
+                        >
+                        <i class="bi bi-chevron-compact-right"></i>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+    
+                    <!--/Conteúdo interno do carrousel-->  
+            </div>
+    
+            <br>
+
+
+
+
+            
+        
+        <!--DESTAQUES--><br>
+        <div class="container-fluid"id="featured-container">
+             <!--(fluid) vai permitir que a imagem ou item utilize o espaço que ela tiver dentro da div-->
+            <!--(id="featured-container")contianer de destaques-->
+            <div class="col-12"> 
+                <h2 class="title primary-color">BELEZA NOS DETALHES</h2>
+                <!--Essa classe (title) será reproduzidas em algumas partes, por isso ela será padrão, é o traço para saparar conteúdo.-->
+                <p class="subtitle secondary-color">
+                    Neste mundo totalmente obcecado pelas belezas naturais, feliz é aquele que sabe dar valor ao que é "velho".
+                <br><br>
+                </p> 
+            </div>
+            <div class="col-12" id="featured-images">
+                 <!--As imagens vão ficar dentro do grid-->
+                 <div class="row g-4">
+                    <!--(g-4) Guter, um espaçamento entre as colunas, para não fazer de forma manual-->
+                    <div class="col-12 col-md-4">
+                       
+                        <img src="https://i.imgur.com/0veaQoW.jpeg" alt="Projeto 1" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem e só vai aparecer qnd passar o mouse pela imagem-->
+                            <p class="secondary-color">EVENTO</p>
+                            <!---->
+                            <h3>Casamento</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/Ty7BKUS.jpeg" alt="Projeto 2" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">EVENTO</p>
+                            <!---->
+                            <h3>Festa de aniversário</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/NUAlVb0.jpeg" alt="Projeto 3" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">EVENTO</p>
+                            <!---->
+                            <h3>Promover Negócios</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <!-- 
+                        https://i.imgur.com/00LY4d8.jpeg-->
+                        <img src="https://i.imgur.com/zl0D8d0.jpeg " 
+                        alt="Projeto 4" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">EVENTO</p>
+                            <!---->
+                            <h3>Encontro em Familia</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/lszGqTY.jpeg" alt="Projeto 5" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">BRIQUEDO</p>
+                            <!---->
+                            <h3>De todos os tipos</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/4kkefWD.jpeg" alt="Projeto 6" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">DECORAÇÃO</p>
+                            <!---->
+                            <h3>Em todos os lugares</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/YGZ8Ivs.jpeg" alt="Projeto 7" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">CULTIVO</p>
+                            <!---->
+                            <h3>Jardim em casa</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/VGtPyhq.jpeg" alt="Projeto 8" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">CRIATIVIDADE</p>
+                            <!---->
+                            <h3>Crianças podem brincar</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!--(fluid) vai permitir que a imagem utilize o espaço que ela tiver dentro da div-->
+                        <img src="https://i.imgur.com/pWYFcgp.jpeg" alt="Projeto 9" class="img-fluid">
+                        <!--Aqui só vai aparecer por causa do houver, qnd o usuario passar o mouse-->
+                        <div class="banner-content">
+                            <!--Vai ficar a baixo da imagem-->
+                            <p class="secondary-color">DECORAÇÃO</p>
+                            <!---->
+                            <h3>Substitui vasos de plantas</h3>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--/DESTAQUES-->
+    
+        <!--  INFO -  -->
+        
+        <div class="container-fluid" id="info-container">
+            <div class="col-12"> <br>
+                <h2 class="title primary-color">A TECNOLOGIA A FAVOR DO MUNDO MELHOR!</h2><!--Essa classe (title) será reproduzidas em algumas partes, por isso ela será padrão e ai define a cor do titulo.-->
+                <p class="subtitle secondary-color">
+                    Venha fazer parte desse universo
+                </p>
+            </div>
+            <br><br>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-5" id="info-banner">
+                        <!--(col-md-5) A imagem a esquerda vai ocupar 5 colunas-->
+                        <img src="https://i.imgur.com/4PL0usw.png" alt="Informações do Evento" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="title primary-color">INOVAÇÃO</h2>
+                                <p class="subtitle secondary-color">
+                                    O desafio da FIRA é apresentar aos visitantes profissionais e à imprensa os fornecedores brasileiros, suas tecnologias, serviços e suas variedades, expondo este setor centenário, que ainda é desconhecido até nas cadeias produtivas próximas. 
+                                </p>
+                            </div>
+                            <div class="col-12" id="info-numbers">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h3 class="primary-color">+200</h3>
+                                        <p class="secondary-color">Expositores</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <h3 class="primary-color">+8.500</h3>
+                                        <p class="secondary-color">Visitantes</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <h3 class="primary-color">+380</h3>
+                                        <p class="secondary-color">Marcas Nacionais e Internacionais</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-12">
+                                <a href="https://www.fira.net.br/" class="btn btn-dark">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="info-container">
+            <div class="col-12"> 
+                <h2 class="title primary-color"></h2><!--Essa classe (title) será reproduzidas em algumas partes, por isso ela será padrão e ai define a cor do titulo.-->
+                <p class="subtitle secondary-color">
+               </p>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-5" id="info-banner">
+                        <img src="https://i.imgur.com/m1OyFOV.jpeg" alt="Informações da empresa" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="title primary-color">SUSTENTABILIDADE</h2>
+                                <p class="subtitle secondary-color">
+                                    A Waste Expo Brasil é considerada a feira mais completa do país dedicada exclusivamente a gestão dos resíduos sólidos, desde a coleta até o destino final, passando pela reciclagem, limpeza pública, tratamento de sucatas e a geração de energia, e neste ano será marcada pelo reencontro dos profissionais do setor.
+                                </p>
+                            </div>
+                            <div class="col-12" id="info-numbers">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h3 class="primary-color">+30</h3>
+                                        <p class="secondary-color">Expositores</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <h3 class="primary-color">+5.000</h3>
+                                        <p class="secondary-color">Visitantes</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <h3 class="primary-color">+30</h3>
+                                        <p class="secondary-color">Marcas envolvidas</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-12">
+                                <a href="http://www.wasteexpo.com.br/" class="btn btn-dark">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /INFO -  -->
+    
+        <!-- FOOTER -->
+        <footer class="container-fluid bg-dark-color" id="footer">
+            <!-- (bg-dark-color)cor de fundo q já foi criada -->
+            <div class="container"><!-- para que o conteúdo respeite a largura maxima do site -->
+                <div class="row">  <!-- Para que o rodapé sejá dividido em varias partes -->
+                    
+                    <!--FOORTER  TOP-->
+                    <div class="col-12" id="footer-top"> 
+                        <!-- Para representar as 12 colunas -->
+                        <div class="row justify-content-between">
+                            <!-- (justify-content-between) Pertence ao flex, faz com que os itens fique cada um em seu seu local -->
+                            <div class="col-4"><h2>Ecoleta</h2></div> <!--4 coluans para colocar o nome do site-->
+                            <div class="col-4" id="social-icons">  <!--4 coluans para colocar os icones das redese= sociais-->
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-youtube"></i>
+                                <i class="bi bi-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER DETAILS-->
+                    <div class="col-12" id="footer-details">
+                        <!--Rodapé central-->
+                        <div class="row"> <!--Para criar a estrutura de linha-->
+                            <div class="col-12 col-md-4" id="contact-container">
+                                <!--(col-md-4) para cada uma das colunas, tendo assim 3 colunas com espaço de 4-->
+                                <h4>
+                                    Contato                            
+                                    </h4>
+                                    <p class="secondary-color"></p>
+                                    <p class="secondary-color">Projeto final do bootcamp idealizado pela
+                                        Generation Brasil, utilizando de técnicas de programação,
+                                        soft skills e metodologias ágeis para construção dessa aplicação </p>
+                                    
+
+
+                            
+                                <!--<form>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Digite o seu e-mail">
+                                    </div>
+                                    <button class="btn btn-dark" type="submit">Inscrever</button>
+                                </form>
+                             <div class="col-12 col-md-4" id="contact-container">
+                                <h4>
+                                Formas de contato.                            
+                                </h4>
+                                <p class="secondary-color">(11)97682-7550</p>
+                                <p class="secondary-color">contato@Ecoleta.com</p>
+                            </div>
+                            
+                                                    
+                            -->
+                            </div>
+                            <div class="col-12 col-md-3" id="news-container">
+                                <h4>Tecnologias</h4>
+                                <p class="secondary-color">
+                                    Bootstrap<br>
+                                    Angular<br>
+                                    Java<br>
+                                    Spring<br>
+                                    JavaScript<br>
+                                    MySql </p>
+                               
+                            </div>
+                            <div class="col-12 col-md-4" id="link-container">
+                                <div class="row">
+                                    <h4>Você pode estar procurando por: </h4>
+                                    <div class="col-3">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#" class="secondary-color">Sobre</a></li>
+                                            <li><a href="#" class="secondary-color">Artes</a></li>
+                                            <li><a href="#" class="secondary-color">Home</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#" class="secondary-color">Contratar</a></li>
+                                            <li><a href="#" class="secondary-color">Trabalhe Conosco</a></li>
+                                            <li><a href="#" class="secondary-color">Contato</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOOTER BOOTTOM-->
+                    <div class="col-12" id="footer-botoom">
+                        <div class="row justify-content-between">
+                            <div class="col-12 col-md-3">
+                                <p class="secondary-color">Ecoleta &copy; 2021</p>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <p class="secondary-color">Juntos faremos a diferença 
+                                    <i class="bi bi-heart"></i>
+                                </p>
+                            </div>
+                        </div>    
+                        
+                    </div>
+    
+                </div>
+            </div>
+        </footer>
+        </body>
+    
+    
+        <div class="modal" tabindex="-1" id="addUsuarioModal">
+            <div class="modal-dialog"> <!--Modal de dialogo, o que tráz a janela do modal para a pagina, como se fizesse ela ter conteúdo-->
+                <div class="modal-content"> <!--(modal-dialog)- Inicio do conteúdo do modal e tras o fundo do modal para que as coisas possam ser escritas e lidas-->
+                
+                    <!--Titulo interno do Modal-->
+                    <!--(modal-header)- Titulo interno do Modal, nessa parte representando o Cabeçalho-->
+                        <div class="modal-header">
+                    <!--Pra colocar a mensagem 'é rapido e fácil' logo a baixo da palavra Cadastre-se, criei um container para dentro dele criar duas linhas com row e assim poder organiza-los de forma vertical-->
+                            <div class="container"> <!--(container)- Deixa layout alinhado corretamente na página-->
+                            <div class="row"> <!--(row)-linhas que definem as divisões-->
+                                <!--** PRECISO VOLTAR AQUI para entender esse Label no final do "addUsuarioModalLabel"-->
+                                <h1 class="modal-title" class="addUsuarioModalLabel" >Cadastre-se<br></h1> <!--(modal-title) Titulo do modal-->
+                            </div>
+                            <div class="row">
+                                <h5 class="modal-title"  class="text-black-50">É rápido e fácil<br></h5>
+                            </div>
+                            </div> <!--TEM UM ESPAÇO QUE QERO TIRAR DEPOIS DESSA FRASE E ANTES DOS ÚLTIMOS BOTÕES-->
+                    <!--/Titulo interno do Modal-->
+                    
+        <!--O 'x' que fica no canto superio para fehcar a tela -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+                
+                        </div>
+            <div class="modal-body">
+                <!--<p>Escreva alguma coisa aqui</!--p>-->
+            <!--Formulário começa aqui-->   
+                <div class="container"> <!-- Pega tudo POR ENQUANTO TIREI O CONTAINER-FLUID -->
+                    <div class="row">
+                            <div class="col-md-12 mt-5 mb-5"> 
+                            
+                            
+                                <!--  POR ENQUANTO TIREI O (D-flex justify-content-center) o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
+                                <div class="row"> 
+                                    <div class="col-md-12">
+                                    <!--TIREI pq já tem no inicio  <h1 class="text-center">Cadastro</h1> -->
+                                    <div class="row justify-content-around"> <!--Pra deixar uma coluna ao lado da outra-->
+                                        <div class="col col-md-6" >
+                                            <div class="form-group">
+                                                <!-- <label for="nome">Nome</label> -->
+                                                <input  [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"> 
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-6">
+                                            <div class="form-group">
+                                                <!-- <label for="usuario">Usuário</label>-->  
+                                                <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!--<label for="foto">Link da Foto</label>-->
+                                            <input  [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto"> 
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <!--<label for="foto">Link da Foto</label>-->
+                                            <input  [(ngModel)]="usuario.email" class="form-control" type="text" name="email" id="email" placeholder="Seu email"> 
+                                        </div>
+                
+                                        <div class="row justify-content-around"> 
+                                        <div class="col col-md-6">
+                                        <div class="form-group">
+                                            <!--<label for="senha">Senha</label>-->
+                                            <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Nova senha"> 
+                                        </div>
+                                        </div>
+                                        <div class="col col-md-6">
+                                        <div class="form-group">
+                                        <!--<label for="ConfirmSenha">Confirmar Senha</label> -->
+                                            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="ConfirmSenha" id="ConfirmSenha" placeholder="Confirmar Senha">
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <!--  -->
+                                 
+                                        <!-- -->
+    
+    
+                                        <div class="form-group" >
+                                            <label for="tipo" class="text-secondary" >Tipo de Usuário</label>
+                                            <select class="form-control" name="tipo" id="tipo">
+                                                <option>Selecione um tipo de usuário: </option>
+                                                <option value="normal">Normal</option>
+                                                <option value="adm">Administrador </option>
+                                            </select>
+                                        </div>
+                                        
+                                        <!-- Vou colocar os botões dentro de uma div, para poder centralizar eles-->
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!--/Formulário começa aqui--> 
+            </div>
+    
+            
+            <!---->
+                <div class="modal-footer">
+                    <!---->
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success mr-4"data-dismiss="modal"(click)="cadastrarUsuario()" >Cadastre-se</button>
+                        <button type="submit" class="btn  btn-danger"routerLink='/entrar' >Cancelar</button>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal esqueleto -->
+    
+    <!-- / INICIO DO MODAL CADASTRO -->
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+    
+    <!--INICIO DO MODAL ENTRAR-->
+    
+    
+        <!-- Modal esqueleto -->
+        <!--(id) - Como o modal foi registrado com # no data-target, aqui ele será representado por um id.-->    
+        <div class="modal" tabindex="-1" id="entrarUsuarioModal">
+            <div class="modal-dialog"> <!--Modal de dialogo, o que tráz a janela do modal para a pagina, como se fizesse ela ter conteúdo-->
+                <div class="modal-content"> <!--(modal-dialog)- Inicio do conteúdo do modal e tras o fundo do modal para que as coisas possam ser escritas e lidas-->
+                
+                    <!--Titulo interno do Modal-->
+                    <!--(modal-header)- Titulo interno do Modal, nessa parte representando o Cabeçalho-->
+                        <div class="modal-header  ">
+                    <!--Pra colocar a mensagem 'é rapido e fácil' logo a baixo da palavra Cadastre-se, criei um container para dentro dele criar duas linhas com row e assim poder organiza-los de forma vertical-->
+                            <div class="container "> <!--(container)- Deixa layout alinhado corretamente na página-->
+                                <div class="row col-12 justify-content-center"> <!--(row)-linhas que definem as divisões-->
+                                    <!--** PRECISO VOLTAR AQUI para entender esse Label no final do "addUsuarioModalLabel"-->
+                                    <h1 class="modal-title" class="entrarUsuarioModal" data-dismiss="modal" >Entrar<br></h1> <!--(modal-title) Titulo do modal-->
+                                    </div>
+                                    <div class="row">
+                                        <h5 class="modal-title"  class="text-black-50"><br></h5>
+                                    </div>
+                            </div> <!--TEM UM ESPAÇO QUE QERO TIRAR DEPOIS DESSA FRASE E ANTES DOS ÚLTIMOS BOTÕES-->
+                    <!--/Titulo interno do Modal-->
+                    
+        <!--O 'x' que fica no canto superio para fehcar a tela -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+                        </div>
+            <div class="modal-body">
+                <div class="container"> <!-- Pega tudo POR ENQUANTO TIREI O CONTAINER-FLUID -->
+                    <div class="row">
+                            <div class="col-md-12 mt-5 mb-5"> 
+                                <!--  POR ENQUANTO TIREI O (D-flex justify-content-center) o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
+                                <div class="row"> 
+                                    <div class="col-md-12">
+                                       
+                                       <div class="row justify-content-around">
+                                        
+    
+                                    <!-- TELA LOGIN COM NOME E SENHA dentro do modal-->
+                                    <div class="container-fluid">
+                                        <div class="row d-flex justify-content-center"> 
+                                    <div class="col-md-12  ">
+    
+                                    <div class="form-group"><!-- * -->
+                                        <label for="usuario ">Usuário </label><!-- * -->
+                                        <input  [(ngModel)]="usuarioLogin.usuario"  class="form-control" type="text" name="usuario" id="usuario1" placeholder="Seu usuário"> <!-- * -->
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="senha">Senha</label>
+                                        <input [(ngModel)]="usuarioLogin.senha"  class="form-control" type="password" name="senha" id="senha1" placeholder="Sua senha">
+                                    </div>
+                                    
+           
+            </div>
+        </div>
+    </div>
+    
+                                    <hr class="mt-5 mb-5">
+                                            <!-- /TELA LOGIN COM NOME E SENHA dentro do modal-->
+      
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <!---->
+                    <div class="d-flex col-12 justify-content-center">
+                        <button type="submit" class="btn btn-success"data-dismiss="modal" (click)="entrar()" >Entrar</button>
+                                           <!--  -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

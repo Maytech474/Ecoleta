@@ -1,0 +1,53 @@
+.fs-16{
+    font-size: 16pt;
+}
+
+a{
+    cursor: pointer;
+}
+
+ .container-fluid justify-content-center{
+ 
+width: 100px;
+height: 100px;
+padding: 2px;
+                                
+}
+
+.box{
+    padding: 2px;
+    left: 10;
+}
+
+.card{
+    margin: 10px;
+   
+    
+    
+}
+
+.card-title{
+    display: inline;
+
+}
+
+.card-body{
+    display: inline;
+    align-items: center;
+}
+
+
+.jumbotron{
+    background:#123417;
+    color:#ffffff
+
+}
+
+
+
+.btn{
+background:#123417;
+}
+
+
+

@@ -1,0 +1,264 @@
+<div class="height"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <div class="row"></div>
+<div class="height"></div>      
+<div class="cards">
+<div *ngFor="let itemmm of listaTemas">
+    <div class="row">
+      
+        <div class="col-11">
+    
+    <div class=".body">
+
+            <div class="card contact">
+                <div class="icon">
+                    <img src="{{itemmm.fotoLink}}" alt="Contact us.">
+                </div>
+                <h3>{{itemmm.descricao}}</h3>
+                <span>{{itemmm.textoTema}}</span>
+                <button href="#postagens" data-toggle="modal" data-target="#novaPostagem">Postar</button>
+            </div>
+           
+       </div> </div> <div class="col-1"></div></div></div></div><div class="height"></div>  </div>
+    </div>
+         
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div
+    class="modal fade"
+    id="novaPostagem"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input
+              type="text"
+              class="form-control"
+              id="titulo"
+              placeholder="Digite o título"
+              [(ngModel)]="postagem.titulo"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea
+              class="form-control"
+              name="texto"
+              id="texto"
+              rows="3"
+              [(ngModel)]="postagem.texto"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="texto">localidade</label>
+            <textarea
+              class="form-control"
+              name="localidade"
+              id="localidade"
+              rows="3"
+              [(ngModel)]="postagem.localidade"
+            ></textarea>
+          </div>
+   
+          <div class="form-group">
+            <label for="numeroTelefone">Número telefone</label>
+            <input
+              class="form-control"
+              name="numeroTelefone"
+              id="telefone"
+              rows="3"
+              [(ngModel)]="postagem.numeroTelefone"
+            >
+
+
+
+  
+          <div class="form-group">
+            <label for="texto"
+              >Escolha um tema 
+          
+            </label> 
+            <!-- *ngIf="auth.admin()" -->
+            <select
+              name="tema"
+              id="tema"
+              class="form-control"
+              (change)="findByIdTema()"
+              [(ngModel)]="idTema"
+            >
+              <option *ngFor="let tema of listaTemas" value="{{ tema.id }}">
+                {{ tema.descricao }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="button" class="btn btn-success" (click)="postar()" data-dismiss="modal" routerLink="/inicio">
+            Publicar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- 
+
+<div class="contaniner-fluid">
+    <div class="height"></div>
+    <div class="row">
+        <div class="col-2"></div>
+    <div class="col-10">
+<div class="body mt-2">
+<div class="container1">
+    <div class="card1">
+
+        <div class="imgbox">
+            <img src="assets/img/sem-plastico.png" alt="">
+        </div> 
+        <div class="content">
+            <h2>card1 One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum pariatur, ipsam natus saepe recusandae mollitia provident, quasi ex ullam amet debitis sequi incidunt? Enim rem quis odit asperiores perspiciatis.</p>
+        </div>       
+
+    </div>
+
+
+
+    <div class="card1">
+
+        <div class="imgbox">
+            <img src="assets/img/lixo-toxico.png" alt="">
+        </div> 
+        <div class="content">
+            <h2>card1 One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum pariatur, ipsam natus saepe recusandae mollitia provident, quasi ex ullam amet debitis sequi incidunt? Enim rem quis odit asperiores perspiciatis.</p>
+        </div>       
+
+    </div>
+
+
+
+
+
+    <div class="card1">
+
+        <div class="imgbox">
+            <img src="assets/img/comida-organica.png" alt="">
+        </div> 
+        <div class="content">
+            <h2>card1 One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum pariatur, ipsam natus saepe recusandae mollitia provident, quasi ex ullam amet debitis sequi incidunt? Enim rem quis odit asperiores perspiciatis.</p>
+        </div>       
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card1">
+
+        <div class="imgbox">
+            <img src="assets/img/bateria.png" alt="">
+        </div> 
+        <div class="content">
+            <h2>card1 One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum pariatur, ipsam natus saepe recusandae mollitia provident, quasi ex ullam amet debitis sequi incidunt? Enim rem quis odit asperiores perspiciatis.</p>
+        </div>       
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card1">
+
+        <div class="imgbox">
+            <img src="assets/img/caminhao-de-lixo.png" alt="">
+        </div> 
+        <div class="content">
+            <h2>card1 One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum pariatur, ipsam natus saepe recusandae mollitia provident, quasi ex ullam amet debitis sequi incidunt? Enim rem quis odit asperiores perspiciatis.</p>
+        </div>       
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card1">
+
+        <div class="imgbox">
+            <img src="assets/img/hospital.png" alt="">
+        </div> 
+        <div class="content">
+            <h2>card1 One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum pariatur, ipsam natus saepe recusandae mollitia provident, quasi ex ullam amet debitis sequi incidunt? Enim rem quis odit asperiores perspiciatis.</p>
+        </div>       
+
+    </div>
+
+
+
+
+
+
+
+
+    
+
+
+</div></div></div></div></div> -->
